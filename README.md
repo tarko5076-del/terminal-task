@@ -161,13 +161,13 @@ TASKS_FILE=/tmp/tasks.json node src/index.js list
 ### Build the Docker image
 
 ```bash
-docker build -t task-manager .
+docker build -t tasks .
 ```
 
 ### Show the help menu
 
 ```bash
-docker run --rm task-manager
+docker run --rm tasks
 ```
 
 ### Add a task

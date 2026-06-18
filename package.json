@@ -4,7 +4,7 @@
   "description": "A simple command-line task manager built with Node.js",
   "main": "src/index.js",
   "bin": {
-    "task-manager": "./src/index.js"
+    "tasks": "./src/index.js"
   },
   "scripts": {
     "start": "node src/index.js",
@@ -13,7 +13,7 @@
   "keywords": [
     "nodejs",
     "cli",
-    "task-manager",
+    "tasks",
     "json"
   ],
   "author": "",
