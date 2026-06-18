@@ -1,0 +1,22 @@
+{
+  "name": "task-manager-cli",
+  "version": "1.0.0",
+  "description": "A simple command-line task manager built with Node.js",
+  "main": "src/index.js",
+  "bin": {
+    "task-manager": "./src/index.js"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "help": "node src/index.js help"
+  },
+  "keywords": [
+    "nodejs",
+    "cli",
+    "task-manager",
+    "json"
+  ],
+  "author": "",
+  "license": "MIT"
+}
+
