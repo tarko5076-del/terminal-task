@@ -1,0 +1,16 @@
+ The shell commands
+********************************
+absolute path and relative path
+ absolute means write every folder name then go to the specfic needs folder
+ relative is step by step using cd 
+ - an other ls -list all files and directories 
+ls -la lsit hidden files 
+ls-lah with in thier storage it has
+
+echo display whatever we wrote 
+ which specifies the file where it is 
+  $ PATH  shows enviroment variables like shows executable folder files belongs to.
+ cat file it prints all file in the terminal 
+sort file sorted al ist of file
+uniq remove a list of duplicate files in listed file.
+

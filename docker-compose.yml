@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  tasks:
+    build: .
+    image: task-manager-cli
+    container_name: task-manager
+    volumes:
+      - ./data:/app/data
+    stdin_open: true
+    tty: true
+    # Override the default command by passing arguments
+    # Example: docker-compose run tasks add "Learn Docker"
+    # Example: docker-compose run tasks list

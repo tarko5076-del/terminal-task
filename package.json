@@ -1,7 +1,6 @@
 {
   "name": "task-manager-cli",
   "version": "1.0.0",
-  "description": "A simple command-line task manager built with Node.js",
   "main": "src/index.js",
   "bin": {
     "tasks": "./src/index.js"

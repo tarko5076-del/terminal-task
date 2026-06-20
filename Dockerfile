@@ -13,6 +13,9 @@ RUN npm install
 # Copy all project files
 COPY . .
 
+# Create data directory for persistent storage
+RUN mkdir -p /app/data
+
 # Run the application
 ENTRYPOINT ["node", "src/index.js"]
 

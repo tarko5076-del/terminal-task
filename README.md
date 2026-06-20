@@ -158,30 +158,72 @@ TASKS_FILE=/tmp/tasks.json node src/index.js list
 
 ## Running with Docker
 
-### Build the Docker image
+### Option 1: Using Docker Compose (Recommended)
+
+Build and run with docker-compose:
 
 ```bash
-docker build -t tasks .
+# Build the image
+docker-compose build
+
+# Show help
+docker-compose run tasks help
+
+# Add a task
+docker-compose run tasks add "Learn Docker"
+
+# List all tasks
+docker-compose run tasks list
+
+# Edit a task
+docker-compose run tasks edit 1 "Learn Docker and Kubernetes"
+
+# Complete a task
+docker-compose run tasks complete 1
+
+# Delete a task
+docker-compose run tasks delete 1
 ```
 
-### Show the help menu
+Data is automatically persisted in the `./data` directory on your host machine.
+
+### Option 2: Using Docker directly
+
+Build the Docker image:
 
 ```bash
-docker run --rm tasks
+docker build -t task-manager-cli .
 ```
 
-### Add a task
+Show the help menu:
 
 ```bash
-docker run --rm task-manager add "Learn Docker"
+docker run --rm task-manager-cli help
 ```
 
-### Keep data between containers
-
-Mount the local data directory as a volume:
+Add a task:
 
 ```bash
-docker run --rm -v $(pwd)/data:/app/data task-manager list
+docker run --rm task-manager-cli add "Learn Docker"
+```
+
+List all tasks:
+
+```bash
+docker run --rm task-manager-cli list
+```
+
+Keep data between containers by mounting the local data directory as a volume:
+
+```bash
+# On Linux/Mac
+docker run --rm -v $(pwd)/data:/app/data task-manager-cli list
+
+# On Windows (PowerShell)
+docker run --rm -v "${PWD}/data:/app/data" task-manager-cli list
+
+# On Windows (Command Prompt)
+docker run --rm -v "%CD%/data:/app/data" task-manager-cli list
 ```
 
 ---
@@ -212,3 +254,4 @@ Possible enhancements:
 ## License
 
 This project is released under the MIT License.
+
