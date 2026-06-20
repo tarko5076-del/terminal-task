@@ -54,7 +54,7 @@ Clone the repository:
 
 ```bash
 git clone <repository-url>
-cd task-manager
+cd tasks
 ```
 
 Install dependencies:
@@ -187,44 +187,6 @@ docker-compose run tasks delete 1
 
 Data is automatically persisted in the `./data` directory on your host machine.
 
-### Option 2: Using Docker directly
-
-Build the Docker image:
-
-```bash
-docker build -t task-manager-cli .
-```
-
-Show the help menu:
-
-```bash
-docker run --rm task-manager-cli help
-```
-
-Add a task:
-
-```bash
-docker run --rm task-manager-cli add "Learn Docker"
-```
-
-List all tasks:
-
-```bash
-docker run --rm task-manager-cli list
-```
-
-Keep data between containers by mounting the local data directory as a volume:
-
-```bash
-# On Linux/Mac
-docker run --rm -v $(pwd)/data:/app/data task-manager-cli list
-
-# On Windows (PowerShell)
-docker run --rm -v "${PWD}/data:/app/data" task-manager-cli list
-
-# On Windows (Command Prompt)
-docker run --rm -v "%CD%/data:/app/data" task-manager-cli list
-```
 
 ---
 
